@@ -42,9 +42,7 @@ class ListNodesController extends ControllerBase {
    */
 
   public function getnodes(){
-
     $uid = \Drupal::currentUser()->id();
-
     $results = [];
     $results = \Drupal::entityQuery('node')
       ->condition('status', 1, '=')
@@ -54,4 +52,21 @@ class ListNodesController extends ControllerBase {
       ->execute();
       return $results;
   }
+
+  /**
+   * @return array
+   */
+
+  public function getnodes_recent(){
+    $uid = \Drupal::currentUser()->id();
+    $results = [];
+    $results = \Drupal::entityQuery('node')
+      ->condition('status', 1, '=')
+      ->condition('uid', $uid)
+      ->sort('nid','DESC')
+      ->range(0, 3)
+      ->execute();
+      return $results;
+  }
+
 }
