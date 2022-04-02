@@ -1,0 +1,12 @@
+name: kadabrait_content
+type: module
+description: 'Kadabrait Content'
+package: Custom
+autor: Juan Ceballos
+core_version_requirement: ^8.8.0 || ^9 || ^10
+version: '1.1.0'
+configure: kadabrait_content.list_nodes
+dependencies:
+  - node
+  - block
+  - views

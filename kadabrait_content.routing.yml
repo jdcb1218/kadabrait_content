@@ -1,0 +1,7 @@
+kadabrait_content.list_nodes:
+  path: '/list-nodes'
+  defaults:
+    _controller: '\Drupal\kadabrait_content\Controller\ListNodesController::index'
+    _title: 'List Nodes'
+  requirements:
+    _permission: 'access administration pages'

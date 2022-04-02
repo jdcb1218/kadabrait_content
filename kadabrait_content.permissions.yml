@@ -1,0 +1,4 @@
+access all kadabrait_content:
+  title: 'kadabrait_content  access control'
+  description: 'kadabrait_content access control when accessing module.'
+  restrict access: TRUE
